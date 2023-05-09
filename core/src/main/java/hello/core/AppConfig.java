@@ -1,6 +1,7 @@
 package hello.core;
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
+import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
@@ -18,7 +19,7 @@ public class AppConfig {
         return new MemoryMemberRepository();
     }
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
     // 메소드명을 보면 역할과 구현 클래스가 한눈에 들어옴.
 }
